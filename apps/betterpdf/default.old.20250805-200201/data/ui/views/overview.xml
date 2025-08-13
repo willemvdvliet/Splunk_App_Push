@@ -1,0 +1,27 @@
+<form version="1.1" hideEdit="true">
+  <label>Overview</label>
+  <init>
+    <set token="pie">/splunkd/__raw/services/betterpdf?savedsearch=betterpdf%20examples%20-%20chart%3Dpie&amp;chart=pie&amp;subtype=none&amp;title=Eventcount%20by%20index</set>
+    <set token="busyimg">/static/app/betterpdf/pdf_grayscale.png</set>
+    <set token="doneimg">/static/app/betterpdf/pdf.png</set>
+  </init>
+  <row>
+    <panel>
+      <html>
+        <h1>Betterpdf integration</h1><br/>
+        Allows to place a link in a dashboard that generates the data as .pdf file and provides a variety of formating settings that include a chart of your data according to your wishes.<br/>
+        Here is an example what it could look like : <br/><b><a href="$pie$" target="_blank"><img src="$doneimg|n$"/> pie demo</a></b> <p/>
+        <br/>        
+        <td>Short video demo<br/>><img src="/static/app/betterpdf/short_demo.gif" /></td>
+        <br/>
+        And the snippet of code in the simple xml dashboard to do this looks like this:<br/>
+        <pre><![CDATA[
+<b><a href="/en-GB/splunkd/__raw/services/betterpdf?savedsearch=spreadsheet%20examples%20-%20chart%3Dpie&amp;chart=pie&amp;title=Eventcount%20by%20index" target="_blank"><img src="/static/app/betterpdf/pdf.png"> pie demo</a></b>]]></pre>
+        <br/>
+        As you can see the link contains parameters that are combined with the default settings resulting in a spreadsheet with a pie chart and a custom title. Under examples you can find some common ways to embed and use this. Also included is a sample dashboard showing export of the search results in a dashboard.
+
+        <p/>
+      </html>
+    </panel>
+  </row>
+</form>

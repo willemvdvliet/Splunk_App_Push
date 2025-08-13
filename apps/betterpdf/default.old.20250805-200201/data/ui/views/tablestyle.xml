@@ -1,0 +1,87 @@
+<dashboard version="1.1" stylesheet="configpage.css" script="tablestyle.js" hideEdit="true">
+  <label>Formating settings</label>
+
+  <row>
+    <panel>
+      <title>Table styles</title>
+      <html>
+      <br/>Click on the table style you want to use.
+        <br/><img src="/static/app/Spreadsheets/style_selection.png" id="tablestyles" usemap="#tablestyles-map"></img>
+        <map id="tablestyles-map">
+          <area class="style" shape="rect" coords="6,41,65,97" name="Table Style Light 1" href="#"/>
+          <area class="style" shape="rect" coords="77,41,133,97" name="Table Style Light 2" href="#"/>
+          <area class="style" shape="rect" coords="147,41,203,97" name="Table Style Light 3" href="#"/>
+          <area class="style" shape="rect" coords="217,41,273,97" name="Table Style Light 4" href="#"/>
+          <area class="style" shape="rect" coords="287,41,343,97" name="Table Style Light 5" href="#"/>
+          <area class="style" shape="rect" coords="347,41,413,97" name="Table Style Light 6" href="#"/>
+          <area class="style" shape="rect" coords="427,41,483,97" name="Table Style Light 7" href="#"/>
+          
+          <area class="style" shape="rect" coords="6,104,65,158" name="Table Style Light 8" href="#"/>
+          <area class="style" shape="rect" coords="77,104,133,158" name="Table Style Light 9" href="#"/>
+          <area class="style" shape="rect" coords="147,104,203,158" name="Table Style Light 10" href="#"/>
+          <area class="style" shape="rect" coords="217,104,273,158" name="Table Style Light 11" href="#"/>
+          <area class="style" shape="rect" coords="287,104,343,158" name="Table Style Light 12" href="#"/>
+          <area class="style" shape="rect" coords="347,104,413,158" name="Table Style Light 13" href="#"/>
+          <area class="style" shape="rect" coords="427,104,483,158" name="Table Style Light 14" href="#"/>
+          
+          <area class="style" shape="rect" coords="6,164,65,221" name="Table Style Light 15" href="#"/>
+          <area class="style" shape="rect" coords="77,164,133,221" name="Table Style Light 16" href="#"/>
+          <area class="style" shape="rect" coords="147,164,203,221" name="Table Style Light 17" href="#"/>
+          <area class="style" shape="rect" coords="217,164,273,221" name="Table Style Light 18" href="#"/>
+          <area class="style" shape="rect" coords="287,164,343,221" name="Table Style Light 19" href="#"/>
+          <area class="style" shape="rect" coords="347,164,413,221" name="Table Style Light 20" href="#"/>
+          <area class="style" shape="rect" coords="427,164,483,221" name="Table Style Light 21" href="#"/>
+          
+          <area class="style" shape="rect" coords="6,273,65,328" name="Table Style Medium 1" href="#"/>
+          <area class="style" shape="rect" coords="77,273,133,328" name="Table Style Medium 2" href="#"/>
+          <area class="style" shape="rect" coords="147,273,203,328" name="Table Style Medium 3" href="#"/>
+          <area class="style" shape="rect" coords="217,273,273,328" name="Table Style Medium 4" href="#"/>
+          <area class="style" shape="rect" coords="287,273,343,328" name="Table Style Medium 5" href="#"/>
+          <area class="style" shape="rect" coords="347,273,413,328" name="Table Style Medium 6" href="#"/>
+          <area class="style" shape="rect" coords="427,273,483,328" name="Table Style Medium 7" href="#"/>
+          
+          <area class="style" shape="rect" coords="6,335,65,388" name="Table Style Medium 8" href="#"/>
+          <area class="style" shape="rect" coords="77,335,133,388" name="Table Style Medium 9" href="#"/>
+          <area class="style" shape="rect" coords="147,335,203,388" name="Table Style Medium 10" href="#"/>
+          <area class="style" shape="rect" coords="217,335,273,388" name="Table Style Medium 11" href="#"/>
+          <area class="style" shape="rect" coords="287,335,343,388" name="Table Style Medium 12" href="#"/>
+          <area class="style" shape="rect" coords="347,335,413,388" name="Table Style Medium 13" href="#"/>
+          <area class="style" shape="rect" coords="427,335,483,388" name="Table Style Medium 14" href="#"/>
+          
+          <area class="style" shape="rect" coords="6,396,65,452" name="Table Style Medium 15" href="#"/>
+          <area class="style" shape="rect" coords="77,396,133,452" name="Table Style Medium 16" href="#"/>
+          <area class="style" shape="rect" coords="147,396,203,452" name="Table Style Medium 17" href="#"/>
+          <area class="style" shape="rect" coords="217,396,273,452" name="Table Style Medium 18" href="#"/>
+          <area class="style" shape="rect" coords="287,396,343,452" name="Table Style Medium 19" href="#"/>
+          <area class="style" shape="rect" coords="347,396,413,452" name="Table Style Medium 20" href="#"/>
+          <area class="style" shape="rect" coords="427,396,483,452" name="Table Style Medium 21" href="#"/>
+          
+          <area class="style" shape="rect" coords="6,456,65,514" name="Table Style Medium 22" href="#"/>
+          <area class="style" shape="rect" coords="77,456,133,514" name="Table Style Medium 23" href="#"/>
+          <area class="style" shape="rect" coords="147,456,203,514" name="Table Style Medium 24" href="#"/>
+          <area class="style" shape="rect" coords="217,456,273,514" name="Table Style Medium 25" href="#"/>
+          <area class="style" shape="rect" coords="287,456,343,514" name="Table Style Medium 26" href="#"/>
+          <area class="style" shape="rect" coords="347,456,413,514" name="Table Style Medium 27" href="#"/>
+          <area class="style" shape="rect" coords="427,456,483,514" name="Table Style Medium 28" href="#"/>
+          
+          <area class="style" shape="rect" coords="6,566,65,623" name="Table Style Dark 1" href="#"/>
+          <area class="style" shape="rect" coords="77,566,133,623" name="Table Style Dark 2" href="#"/>
+          <area class="style" shape="rect" coords="147,566,203,623" name="Table Style Dark 3" href="#"/>
+          <area class="style" shape="rect" coords="217,566,273,623" name="Table Style Dark 4" href="#"/>
+          <area class="style" shape="rect" coords="287,566,343,623" name="Table Style Dark 5" href="#"/>
+          <area class="style" shape="rect" coords="347,566,413,623" name="Table Style Dark 6" href="#"/>
+          <area class="style" shape="rect" coords="427,566,483,623" name="Table Style Dark 7" href="#"/>
+          
+          <area class="style" shape="rect" coords="6,625,65,683" name="Table Style Dark 8" href="#"/>
+          <area class="style" shape="rect" coords="77,625,133,683" name="Table Style Dark 9" href="#"/>
+          <area class="style" shape="rect" coords="147,625,203,683" name="Table Style Dark 10" href="#"/>
+          <area class="style" shape="rect" coords="217,625,273,683" name="Table Style Dark 11" href="#"/>
+        </map>
+        
+      <br/>
+      Table style: <input type="text" id="tablestyles_setting"/>
+      <br/>
+      </html>
+    </panel>
+  </row>
+</dashboard>

@@ -1,0 +1,16 @@
+type,subtype
+none,none
+area,stacked
+area,percent_stacked
+bar,stacked
+bar,percent_stacked
+column,stacked
+column,percent_stacked
+scatter,straight_with_markers
+scatter,straight
+scatter,smooth_with_markers
+scatter,smooth
+line,stacked
+line,percent_stacked
+radar,with_markers
+radar,filled

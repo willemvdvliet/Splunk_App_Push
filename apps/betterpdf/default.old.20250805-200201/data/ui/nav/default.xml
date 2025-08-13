@@ -1,0 +1,11 @@
+<nav search_view="search" color="#3c6188">
+<view name="overview" default="true" />
+<view name="examples" />
+<view name="sample_dashboard" />
+<view name="export_reports"/>
+<view name="logs"/>
+<view name="browser_adoption"/>
+<view name="license" />
+<!-- <view name="formating" /> -->
+<view name="search" />
+</nav>

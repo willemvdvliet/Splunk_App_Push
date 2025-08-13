@@ -1,0 +1,21 @@
+{
+  "name": "betterpdf",
+  "version": "1.0.0",
+  "description": "Betterpdf visualization, add a chart with a download as pdf to your dashboard.",
+  "main": "visualization.js",
+  "scripts": {
+    "build": "$SPLUNK_HOME/bin/splunk cmd node ./node_modules/webpack/bin/webpack.js",
+    "devbuild": "$SPLUNK_HOME/bin/splunk cmd node ./node_modules/webpack/bin/webpack.js --progress",
+    "watch": "$SPLUNK_HOME/bin/splunk cmd node ./node_modules/webpack/bin/webpack.js -d --watch --progress"
+  },
+  "author": "kauswagan.io",
+  "license": "see kauswagan.io",
+  "devDependencies": {
+    "webpack": "^1.12.6"
+  },
+  "dependencies": {
+    "jquery": "^3.4.0",
+    "splunk-sdk": "^2.0.0",
+    "underscore": "^1.13.6"
+  }
+}

@@ -1,0 +1,95 @@
+<form version="1.1" hideEdit="true">
+  <label>Examples</label>
+  <init>
+    <set token="icon">/static/app/betterpdf/pdf.png</set>
+    <set token="treemap">/splunkd/__raw/services/betterpdf?savedsearch=betterpdf%20examples%20-%20timechart&amp;chart=treemap</set>
+    <set token="stock">/splunkd/__raw/services/betterpdf?savedsearch=betterpdf%20examples%20-%20chart%3Dcolumn&amp;chart=stock</set>
+    <set token="pie">/splunkd/__raw/services/betterpdf?savedsearch=betterpdf%20examples%20-%20chart%3Dpie&amp;chart=pie&amp;subtype=none</set>
+    <set token="column">/splunkd/__raw/services/betterpdf?savedsearch=betterpdf%20examples%20-%20chart%3Dcolumn&amp;chart=column&amp;subtype=none</set>
+    <set token="bar">/splunkd/__raw/services/betterpdf?savedsearch=betterpdf%20examples%20-%20chart%3Dcolumn&amp;chart=bar&amp;subtype=none</set>
+    <set token="_amp_">&amp;</set>
+    <set token="radar">/splunkd/__raw/services/betterpdf?savedsearch=betterpdf%20examples%20-%20chart%3Dpie&amp;chart=radar&amp;&amp;subtype=filled</set>
+    <set token="table">/splunkd/__raw/services/betterpdf?savedsearch=betterpdf%20examples%20-%20timechart&amp;table=true</set>
+  </init>
+  <row>
+    <panel>
+      <html>
+        <h1>Better PDF</h1><br/>
+        Allows to place a link in a dashboard that generates the data as .pdf file and provides a variety of formating settings like a company logo and can include a chartsheet of your data according to your wishes.<br/>
+        See a few examples below to ilustrate what can be achieved with relatively little effort. In adition to the global formating options set under "Formating settings" you can add options in the download link including charting and table formating options. Please see a few easy examples below.
+        <p/><br/>
+        <table>
+        <tr>
+          <td>
+        <img src="/static/app/betterpdf/coverpage.png"></img>
+        </td>
+        <td>
+        Coverpage for tabular reports, includes information about the search job execution like errors that occured etc required to use it for evidence in audits. Here is an example: <br/>
+        <b><a href="$table$" target="_blank"><img src="$icon|n$"/> Sample report</a></b><!-- | <b><a href="$bar$$_amp_$subtype=stacked" target="_blank"><img src="$icon|n$"/> option stacked</a></b> | <b><a href="$bar$$_amp_$subtype=percent_stacked" target="_blank"><img src="$icon|n$"/> option percent_stacked</a></b> -->
+        </td>
+        <td>
+        <img src="/static/app/betterpdf/tables.png"></img>
+        </td>
+        <td>
+        Tabular data, number of rows only limited by available memory. Requirement if you need to produce evidence and have very large reports with tens of thousands of rows or even hundreds of thousands.<p/> 
+        <b><a href="$table$" target="_blank"><img src="$icon|n$"/> Sample report</a></b>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <p/>
+        <!-- <h1>Note: charts only work if cairo and java is available on the system. ( See <a href="https://www.cairographics.org/download/" target="_blank">cairographics</a> for more information).</h1> -->
+        <p/>
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <img src="/static/app/betterpdf/charttype_treemap.png"></img>
+        </td>
+        <td>
+        Treemap chart. Here is an example: <br/><b><a href="$treemap$" target="_blank"><img src="$icon|n$"/> treemap demo</a></b> <p/> 
+        </td>
+        <!--</tr>
+        <tr>-->
+        <td>
+        <img src="/static/app/betterpdf/charttype_stock.png"></img>
+        </td>
+        <td>
+        Stock chart, every other row is highlighte. Here is an example: <br/><b><a href="$stock$" target="_blank"><img src="$icon|n$"/> stock demo</a></b> <p/> 
+        </td>
+        </tr>
+        <tr>
+        <td>
+        <img src="/static/app/betterpdf/charttype_pie.png"></img>
+        </td>
+        <td>
+        Useful for a search like | stats count by x - treats the first column as series and the second column as values. Here is an example: <br/><b><a href="$pie$" target="_blank"><img src="$icon|n$"/> pie demo</a></b> <p/> 
+        </td>
+          <td>
+        <img src="/static/app/betterpdf/charttype_column.png"></img>
+        </td>
+        <td>
+        Useful for a search like | stats count by x - treats the first column from the second row on as series and the second column till the last column from the second row on as values. Here is an example: <br/>
+        <b><a href="$column$" target="_blank"><img src="$icon|n$"/> column demo</a></b><!-- | <b><a href="$column$$_amp_$subtype=stacked" target="_blank"><img src="$icon|n$"/> option stacked</a></b> | <b><a href="$column$$_amp_$subtype=percent_stacked" target="_blank"><img src="$icon|n$"/> option percent_stacked</a></b> -->
+        </td>
+        </tr>
+        <tr>
+          <td>
+        <img src="/static/app/betterpdf/charttype_bar.png"></img>
+        </td>
+        <td>
+        Useful for a search like | stats count by x - treats the first column from the second row on as series and the second column till the last column from the second row on as values. Here is an example: <br/>
+        <b><a href="$bar$" target="_blank"><img src="$icon|n$"/> bar demo</a></b><!-- | <b><a href="$bar$$_amp_$subtype=stacked" target="_blank"><img src="$icon|n$"/> option stacked</a></b> | <b><a href="$bar$$_amp_$subtype=percent_stacked" target="_blank"><img src="$icon|n$"/> option percent_stacked</a></b> -->
+        </td>
+        <td>
+        <img src="/static/app/betterpdf/charttype_radar.png"></img>
+        </td>
+        <td>
+        Useful for a search like | stats count by x - treats the first column as series and the second column as values. Here is an example: <br/><b><a href="$radar$" target="_blank"><img src="$icon|n$"/> radar demo</a></b> <p/> 
+        </td>
+        </tr>
+        </table>
+      </html>
+    </panel>
+  </row>
+</form>

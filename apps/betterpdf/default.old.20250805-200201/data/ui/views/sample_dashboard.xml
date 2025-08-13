@@ -1,0 +1,168 @@
+<form version="1.1"> <!-- > hideEdit="true"> -->
+  <init>
+    <set token="busyimg">/static/app/betterpdf/pdf_grayscale.png</set>
+    <set token="doneimg">/static/app/betterpdf/pdf.png</set>
+    <set token="title"></set>
+  </init>
+  <label>sample dashboard with options</label>
+  <fieldset submitButton="false">
+    <input type="text" token="search">
+      <label>Search</label>
+      <initialValue>| rest splunk_server=local /servicesNS/nobody/search/saved/searches/ | fields id,title</initialValue>
+    </input>
+    <input type="time" token="timerange">
+      <label></label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input type="dropdown" token="chart">
+      <label>Chart</label>
+      <fieldForLabel>display_value</fieldForLabel>
+      <fieldForValue>url_fragment</fieldForValue>
+      <initialValue>&amp;table=true</initialValue>
+      <search>
+        <query>| rest splunk_server=local /services/betterpdf charttypes=true | table display_value,url_fragment</query>
+      </search>
+    </input>
+    <input type="text" token="titlestr" searchWhenChanged="true">
+      <label>Title</label>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <table id="exportexcel">
+        <search id="realsearch">
+          <done>
+            <set token="job">$job.sid$</set>
+            <set token="icon">$doneimg$</set>
+          </done>
+          <progress>
+            <eval token="progress">$job.doneProgress$</eval>
+            <eval token="icon">$busyimg$</eval>
+            <eval token="progressPct">$progress$*100</eval>
+          </progress>
+          <query>$search$</query>
+          <earliest>$timerange.earliest$</earliest>
+          <latest>$timerange.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+      </table>
+    </panel>
+  </row>
+  <row depends="$showHelper$">
+    <panel>
+      <title>$title$</title>
+      <table>
+        <search>
+          <query>|  makeresults | eval urlsafe="&amp;title=$titlestr|u$" | table urlsafe</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <done>
+            <set token="title">$result.urlsafe$</set>
+          </done>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Do a get call to this url: /splunkd/__raw/services/betterpdf?job=$job$$chart$$title$</title>
+      <html>
+        <a href="/splunkd/__raw/services/betterpdf?job=$job$$chart$$title$" target="_blank">
+          <img src="$icon|n$"/><br/>(progress: $progressPct$%) 
+        </a></html>
+    </panel>
+  </row>
+  <row>
+  <panel>
+  <html>Dashboard source:<br/>
+    <pre><![CDATA[
+<form version="1.1" hideEdit="true">
+  <init>
+    <set token="busyimg">/static/app/betterpdf/pdf_grayscale.png</set>
+    <set token="doneimg">/static/app/betterpdf/pdf.png</set>
+    <set token="title"></set>
+  </init>
+  <label>sample dashboard with options</label>
+  <fieldset submitButton="false">
+    <input type="text" token="search">
+      <label>Search</label>
+      <initialValue>| rest splunk_server=local /servicesNS/nobody/search/saved/searches/ | fields id,title</initialValue>
+    </input>
+    <input type="time" token="timerange">
+      <label></label>
+      <default>
+        <earliest>-24h@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input type="dropdown" token="chart">
+      <label>Chart</label>
+      <fieldForLabel>display_value</fieldForLabel>
+      <fieldForValue>url_fragment</fieldForValue>
+      <search>
+        <query>| rest splunk_server=local /services/betterpdf charttypes=true | table display_value,url_fragment</query>
+      </search>
+    </input>
+    <input type="text" token="titlestr" searchWhenChanged="true">
+      <label>Title</label>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <table id="exportexcel">
+        <search id="realsearch">
+          <done>
+            <set token="job">$job.sid$</set>
+            <set token="icon">$doneimg$</set>
+          </done>
+          <progress>
+            <eval token="progress">$job.doneProgress$</eval>
+            <eval token="icon">$busyimg$</eval>
+            <eval token="progressPct">$progress$*100</eval>
+          </progress>
+          <query>$search$</query>
+          <earliest>$timerange.earliest$</earliest>
+          <latest>$timerange.latest$</latest>
+          <sampleRatio>1</sampleRatio>
+        </search>
+      </table>
+    </panel>
+  </row>
+  <row depends="$showHelper$">
+    <panel>
+      <title>$title$</title>
+      <table>
+        <search>
+          <query>|  makeresults | eval urlsafe="&amp;title=$titlestr|u$" | table urlsafe</query>
+          <earliest>-24h@h</earliest>
+          <latest>now</latest>
+          <done>
+            <set token="title">$result.urlsafe$</set>
+          </done>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="refresh.display">progressbar</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Do a get call to this url: /splunkd/__raw/services/betterpdf?job=$job$$chart$$title$</title>
+      <html>
+        <a href="/splunkd/__raw/services/betterpdf?job=$job$$chart$$title$" target="_blank">
+          <img src="$icon|n$"/><br/>(progress: $progressPct$%) 
+        </a></html>
+    </panel>
+  </row>
+  <row>
+  </form>
+        ]]></pre>
+  </html>
+  </panel>
+  </row>
+</form>
