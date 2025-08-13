@@ -1,0 +1,3 @@
+<endpoint name="federated_search/new_amazon_s3_provider" showAppContext="1" template="pages/page_from_package.html" packageName="admin-user-xp">
+  <header>Amazon S3 Provider</header>
+</endpoint>

@@ -1,0 +1,18 @@
+
+# app-level excludes
+*/local/**
+*/metadata/local.meta
+*/local.meta
+*/certs/**
+*/.git/**
+*/.svn/**
+*/.DS_Store
+*/*.pyc
+*/__pycache__/**
+# secrets commonly found
+*/default/passwords.conf
+*/default/inputs.conf.secret
+*/default/outputs.conf.secret
+# build artifacts / caches
+*/bin/__pycache__/**
+*/static/build/**

@@ -1,0 +1,13 @@
+<endpoint name="agent_management_otel" template="pages/page_from_package.html" showOnSearchHeadCluster="0" packageName="agent_management">
+  <header>unused</header>
+  <capabilities>
+    <read>(list_data_management_otelcollector AND edit_data_management_otelcollector)</read>
+  </capabilities>
+  <menu name="deployment_configurations">
+    <label>OTel Collectors</label>
+    <url>/manager/%(namespace)s/agent_management_otel</url>
+    <description>The fleet overview of OpenTelemetry Collectors.</description>
+    <order>5</order>
+    <id>agent_management_otel</id>
+  </menu>
+</endpoint>

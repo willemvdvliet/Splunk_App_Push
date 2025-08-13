@@ -1,0 +1,6 @@
+<endpoint name="agent_management_assign_configurations_to_group" template="pages/page_from_package.html" packageName="agent_management">
+  <header>unused</header>
+  <capabilities>
+    <read>(list_deployment_server AND edit_deployment_server)</read>
+  </capabilities>
+</endpoint>

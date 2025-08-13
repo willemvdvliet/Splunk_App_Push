@@ -1,0 +1,6 @@
+<endpoint name="bulkreassign" template="pages/system.html">
+  <capabilities>
+    <read>admin_all_objects OR edit_saved_search_owner</read>
+  </capabilities>
+  <header>Bulk Reassign</header>
+</endpoint>
